@@ -15,7 +15,6 @@ function TrangChuListPhim(props) {
       slidesToScroll: 4,
       initialSlide: 0,
       rows: 2,
-      // adaptiveHeight: true,
       responsive: [
          {
             breakpoint: 1024,
