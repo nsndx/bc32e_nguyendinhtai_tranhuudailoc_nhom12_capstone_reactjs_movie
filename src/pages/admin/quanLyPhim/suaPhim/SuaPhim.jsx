@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import moment from 'moment';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { layThongTinLichChieuPhim } from '../../../../stores/quanLyRapReducer/quanLyRapReducer';
+import { layThongTinLichChieuPhim, quanLyRapActions } from '../../../../stores/quanLyRapReducer/quanLyRapReducer';
 import { capNhatPhimUpload, quanLyPhimActions } from '../../../../stores/quanLyPhimReducer/quanLyPhimReducer';
 
 
@@ -19,6 +19,7 @@ export default function SuaPhim() {
    useEffect(() => {
       dispatch(layThongTinLichChieuPhim(param.id))
       dispatch(quanLyPhimActions.suaPhim())
+      dispatch(quanLyRapActions.lichChieuPhim())
    }, [])
    useEffect(() => {      
       reset({

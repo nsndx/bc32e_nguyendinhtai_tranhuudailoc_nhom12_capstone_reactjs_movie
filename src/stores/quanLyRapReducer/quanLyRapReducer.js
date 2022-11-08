@@ -14,6 +14,9 @@ export const { reducer: quanLyRapReducer, actions: quanLyRapActions } = createSl
    reducers: {
       thongTinCumRapTheoHeThong: (state, action) => {
          state.thongTinCumRapTheoHeThong = []
+      },
+      lichChieuPhim: (state, action) => {
+         state.lichChieuPhim = {}
       }
    },
    extraReducers: (builder) => {
